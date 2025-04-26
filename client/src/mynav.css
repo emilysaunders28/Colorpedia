@@ -1,0 +1,24 @@
+.navbar .navbar-brand {
+    margin-left: 20px;
+}
+
+.navbar .navbar-nav {
+    margin-right: 20px;
+}
+
+.navbar.top-bar .navbar-nav .nav-item.dropdown a {
+    font-size: 1.5rem;
+}   
+
+
+
+.navbar.navbar.top-bar.learn-quiz .navbar-brand {
+    font-size: 2.2em;
+    color: white;
+    font-weight: bold;
+}
+
+.navbar-logo {
+    max-height: 50px;
+}
+

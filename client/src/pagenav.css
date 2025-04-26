@@ -1,0 +1,31 @@
+.page-nav .navbar-nav {
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 0;
+}
+
+.page-nav .navbar-nav a.nav-link {
+    border-radius: 5px;
+    padding: 8px 15px;
+}
+
+.page-nav .navbar-nav a.back-next {
+    cursor: pointer;
+}
+
+
+.page-nav .navbar-nav a.page-number:hover {
+    background-color: white;
+}
+
+.page-nav .navbar-nav a.nav-link {
+    color: black;
+}
+
+.page-nav .navbar-nav {
+    background-color: #ceffea;
+}
+
+.page-nav .current {
+    background-color: #ccff87;
+}

@@ -1,0 +1,93 @@
+.sidebar {
+    height: 120vh;
+    width: 230px;
+    padding: 0;
+    flex: none;
+  }
+
+.sidebar-logo {
+    max-width: 100%;
+    padding: 15px;
+    padding-bottom: 0px;
+    flex: none;
+}
+
+@media (min-width: 992px) {
+    .sidebar {
+        width: 300px;
+    }
+}
+
+.sidebar .accordion-body {
+    padding: 0px;
+}
+  
+.sidebar .sidebar-link {
+    padding: 10px;
+    padding-left: 20px;
+}
+  
+.final-quiz-sidebar {
+    padding: 16px 20px 16px 20px ;
+}
+  
+.sidebar-icon {
+    padding-right: 10px;
+    color: #ff0000;
+}
+
+.logged-in-sidebar button.accordion-button{
+    color: #ff0000;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.logged-in-sidebar .sidebar-icon {
+    color: #ff0000;
+}
+
+
+.sidebar {
+    border-right: 1px solid #ccff87;
+    border-top: 1px solid #ccff87;
+    background-color: white;
+}
+
+.sidebar .accordion-button:not(.collapsed) {
+    background-color: white;
+}
+
+.sidebar .accordion-item {
+    border-color: #ccff87;
+}
+
+.sidebar .sidebar-link:hover {
+    background-color: #ccff87;
+}
+  
+.sidebar a {
+    text-decoration: none;
+    color: #003249;
+}
+
+.sidebar .accordion-header {
+    border-color: #ccff87;
+}
+
+.sidebar .sidebar-link{
+    background-color: #ceffea;
+    border: 1px solid white;
+}
+
+.sidebar .final-quiz-sidebar:hover {
+    background-color: #ccff87;
+}
+  
+.sidebar .accordion-button{
+    background-color: white;
+    color: darkslategray;
+}
+
+.sidebar .final-quiz-sidebar {
+    background-color: white;
+}

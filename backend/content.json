@@ -1,0 +1,1243 @@
+{
+    "hue" : {
+        "learn" : {
+            "1": {
+                "title": "Hue",
+                "text": "Hue describes what we typically think of as the color of an object, for instance ''blue'', ''red'', ''purple'' etc. Hue can be represented as a color's position on a standard color wheel. Adding white, black or grey will not change a color's hue.",
+                "media": [
+                    {
+                        "id": 0,
+                        "src":"/media/hue11.png",
+                        "caption": "",
+                        "description": "The color wheel. Each position represents a different hue.",
+                        "alt" : "Image of a color wheel"
+                    },
+                    {
+                        "id": 1,
+                        "src":"/media/hue12.png",
+                        "caption": "",
+                        "description": "Different colors with the same hue.",
+                        "alt" : "Image of 3 shades of red"
+                    }
+                ]
+        
+            },
+            "2": {
+                "title": "Hue",
+                "text": "Pure hues are hues without any black, white or grey added. When used sparingly, pure hues can give a playful feel to a composition, or draw the eye in interesting ways.",
+                "media": [
+                    {
+                        "id": 0,
+                        "src" : "/media/hue21.png",
+                        "caption" : "Photograph by Fred Herzog",
+                        "description" : "The pure red hue in this photograph makes a strong impact when paired with the surrounding muted colors.",
+                        "alt" : "Photograph by Fred Herzog"
+                    },
+                    {
+                        "id": 1,
+                        "src" : "/media/hue22.png",
+                        "caption" : "Cover art for <i>Never Mind the Bollocks here's the Sex Pistols</i> by Sex Pistols",
+                        "description" : "Pure hues give this album design a fun a playful feel.",
+                        "alt" : "Cover art for Never Mind the Bollocks here's the Sex Pistols"
+                    }
+                ]
+            },
+            "3": {
+                "title": "Hue",
+                "text": "However, pure hues can easily become overwhelming and unpleasant, especially if they are far apart on the color wheel.",
+                "media": [
+                    {
+                        "id": 0,
+                        "src" : "/media/hue31.png",
+                        "caption" : "",
+                        "description" : "Too many pure hues can create a clashing effect",
+                        "alt" : "image with bright primary colors"
+                    },
+                    {
+                        "id": 1,
+                        "src" : "/media/hue32.png",
+                        "caption" : "<i>The Night Cafe</i> by Vincent Van Gogh",
+                        "description" : "This painting uses bright clashing hues to create an intentionally unsettling effect.",
+                        "alt" : "The Night Cafe by Vincent Van Gogh"
+                    }
+                ]
+            }
+        },
+        "quiz" : {
+            "1" : {
+                "type" : "image_select",
+                "question_text" : "Select the pure hues that best represents the colors in the following image",
+                "question_media" : [
+                    {
+                        "src" : "/media/huequiz1media1.jpeg",
+                        "caption" : "Photograph by Craig Whitehead"
+                    }
+                ],
+                "options" : [
+                    {
+                        "id" : "0",
+                        "src" : "/media/huequiz1option1.png",
+                        "caption" : "",
+                        "correct" : false,
+                        "explanation" : "The blue in this image is different."
+                    },
+                    {
+                        "id" : "1",
+                        "src" : "/media/huequiz1option2.png",
+                        "caption" : "",
+                        "correct" : false,
+                        "explanation" : "There are no red hues in this image."
+                    },
+                    {
+                        "id" : "2",
+                        "src" : "/media/huequiz1option3.png",
+                        "caption" : "",
+                        "correct" : true,
+                        "explanation" : "The orange has the same hue as the pole and the blue has the same hue as the background wall."
+                    }
+                ]
+            },
+            "2" : {
+                "type" : "image_select",
+                "question_text" : "Which of the following is NOT a hue seen in this image",
+                "question_media" : [
+                    {
+                        "src" : "/media/huequiz2media1.jpeg",
+                        "caption" : "<i>The Bay</i> by Helen Frankenthaler"
+                    }
+                ],
+                "options" : [
+                    {
+                        "id" : "0",
+                        "src" : "/media/huequiz2option1.png",
+                        "caption" : "",
+                        "correct" : false,
+                        "explanation" : "There is a small orange section in this painting"
+                    },
+                    {
+                        "id" : "1",
+                        "src" : "/media/huequiz2option2.png",
+                        "caption" : "",
+                        "correct" : false,
+                        "explanation" : "This pure green has the same hue as the background of this painting"
+                    },
+                    {
+                        "id" : "2",
+                        "src" : "/media/huequiz2option3.png",
+                        "caption" : "",
+                        "correct" : true,
+                        "explanation" : "Purple does not appear in this painting"
+                    },
+                    {
+                        "id" : "3",
+                        "src" : "/media/huequiz2option4.png",
+                        "caption" : "",
+                        "correct" : false,
+                        "explanation" : "This blue hue is featured prominently in this painting"
+                    }
+                ]
+            },
+            "3" : {
+                "type" : "image_select",
+                "question_text" : "Which of the following pairs has the same hue?",
+                "question_media" : [],
+                "options" : [
+                    {
+                        "id" : "0",
+                        "src" : "/media/huequiz3option1.png",
+                        "caption" : "",
+                        "correct" : false,
+                        "explanation" : "While we might call both of these colors blue, they have different hues. The left color is more of a true blue, while the right color is turquoise."
+                    },
+                    {
+                        "id" : "1",
+                        "src" : "/media/huequiz3option2.png",
+                        "caption" : "",
+                        "correct" : true,
+                        "explanation" : "Both of these colors have the same red hue."
+                    },
+                    {
+                        "id" : "2",
+                        "src" : "/media/huequiz3option3.png",
+                        "caption" : "",
+                        "correct" : false,
+                        "explanation" : "These colors have different hues."
+                    }
+                ]
+            }
+        }
+    },
+    "shade" : {
+        "learn" : {
+            "1" : {
+                "title": "Shade",
+                "text": "A shade is a hue with black added to it. Colloquially, shade is used to refer to any variance of a hue, but in color terminology shade only refers to variations achieved by adding black.",
+                "media": [
+                    {
+                        "id": 0,
+                        "src" : "/media/shade11.png",
+                        "caption" : "",
+                        "description" : "Shades of green",
+                        "alt" : "Shades of green"
+                    }
+                ]
+            },
+            "2": {
+                "title": "Shade",
+                "text": "When used prominently, shades can create a dark, moody effect",
+                "media": [
+                    {
+                        "id": 0,
+                        "src" : "/media/shade21.png",
+                        "caption" : "Still frame from <i>The Favorite</i> directed by Yorgos Lanthimos",
+                        "description" : "",
+                        "alt" : "Still frame from The Favorite"
+                    },
+                    {
+                        "id": 1,
+                        "src" : "/media/shade22.jpeg",
+                        "caption" : "<i>Dos Viejos Comiendo Sopa</i> by Francisco Goya",
+                        "description" : "",
+                        "alt" : "Dos viejos comiendo sopa painting by Francisco Goya"
+                    }
+                ]
+            }
+        },
+        "quiz" : {
+            "1" : {
+                "type" : "image_select",
+                "question_text" : "Which of the following is a shade of the hue shown",
+                "question_media" : [
+                    {
+                        "src" : "/media/shadequiz1media1.png",
+                        "caption" : ""
+                    }
+                ],
+                "options" : [
+                    {
+                        "id" : "0",
+                        "src" : "/media/shadequiz1option1.png",
+                        "caption" : "",
+                        "correct" : false,
+                        "explanation" : "The color is obtained by adding white to the hue, shades are obtained by adding black."
+                    },
+                    {
+                        "id" : "1",
+                        "src" : "/media/shadequiz1option2.png",
+                        "caption" : "",
+                        "correct" : false,
+                        "explanation" : "This color has a different hue."
+                    },
+                    {
+                        "id" : "2",
+                        "src" : "/media/shadequiz1option3.png",
+                        "caption" : "",
+                        "correct" : true,
+                        "explanation" : "This color is obtained by adding black to the hue."
+                    }
+                ]
+            },
+            "2" : {
+                "type" : "image_select",
+                "question_text" : "Which of the following 2 images most prominently features shades",
+                "question_media" : [],
+                "options" : [
+                    {
+                        "id" : "0",
+                        "src" : "/media/shadequiz2option1.png",
+                        "caption" : "<i>Blade Runner 2049</i> directed by Denis Villeneuve.",
+                        "correct" : true,
+                        "explanation" : "The predominently dark colors in this image are shades."
+                    },
+                    {
+                        "id" : "1",
+                        "src" : "/media/shadequiz2option2.webp",
+                        "caption" : "",
+                        "correct" : false,
+                        "explanation" : "Shades are dark, the colors in this image are primarily light."
+                    }
+                ]
+            },
+            "3" : {
+                "type" : "image_select",
+                "question_text" : "Select the pair where one color is a shade of the other.",
+                "question_media" : [],
+                "options" : [
+                    {
+                        "id" : "0",
+                        "src" : "/media/shadequiz3option1.png",
+                        "caption" : "",
+                        "correct" : false,
+                        "explanation" : "These are 2 different hues"
+                    },
+                    {
+                        "id" : "1",
+                        "src" : "/media/shadequiz3option2.png",
+                        "caption" : "",
+                        "correct" : false,
+                        "explanation" : "These colors are obtained by adding white to a blue hue. Shades are obtained by adding black to a color."
+                    },
+                    {
+                        "id" : "2",
+                        "src" : "/media/shadequiz3option3.png",
+                        "caption" : "",
+                        "correct" : true,
+                        "explanation" : "The color on the right is a shade of the color on the left."
+                    }
+                ]
+            }
+        }
+    },
+    "tint" : {
+        "learn" : {
+            "1" : {
+                "title": "Tint",
+                "text": "A tint is a hue with white added to it. Tints are often colloquially referred to as ''pastel'' colors.",
+                "media": [
+                    {
+                        "id": 0,
+                        "src" : "/media/tint11.png",
+                        "caption" : "",
+                        "description" : "Tints of red",
+                        "alt" : "Tints of red"
+                    }
+                ]
+            },
+            "2" : {
+                "title": "Tint",
+                "text": "When used prominently, tints can create a lighter, brighter feel or a vintage effect, as if the color has faded over time.",
+                "media": [
+                    {
+                        "id": 0,
+                        "src" : "/media/tint21.png",
+                        "caption" : "<i>On the Cliffs</i> by Helen McNicoll.",
+                        "description" : "The tints in this painting give the sceen a light, calming effect.",
+                        "alt" : "On the cliffs by Helen McNicoll"
+                    },
+                    {
+                        "id": 1,
+                        "src" : "/media/tint22.png",
+                        "caption" : "Cover art for <i>Goodbye Yellow Brick Road</i> by Elton John",
+                        "description" : "Tints in this album cover design give it a vintage feel.",
+                        "alt" : ""
+                    }
+                ]
+            }
+        },
+        "quiz" : {
+            "1" : {
+                "type" : "image_select",
+                "question_text" : "Select the pair where one color is a tint of the other.",
+                "question_media" : [],
+                "options" : [
+                    {
+                        "id" : "0",
+                        "src" : "/media/tintquiz1option1.png",
+                        "caption" : "",
+                        "correct" : true,
+                        "explanation" : "The color on the right is a tint of the hue on the left."
+                    },
+                    {
+                        "id" : "1",
+                        "src" : "/media/tintquiz1option2.png",
+                        "caption" : "",
+                        "correct" : false,
+                        "explanation" : "These colors are both tints of different hues."
+                    },
+                    {
+                        "id" : "2",
+                        "src" : "/media/tintquiz1option3.png",
+                        "caption" : "",
+                        "correct" : false,
+                        "explanation" : "The color on the left is a shade of the hue on the right."
+                    }
+                ]
+            },
+            "2" : {
+                "type" : "image_select",
+                "question_text" : "Which of the following 2 images most prominently features tints",
+                "question_media" : [],
+                "options" : [
+                    {
+                        "id" : "0",
+                        "src" : "/media/tintquiz2option1.jpeg",
+                        "caption" : "Painting by Claude Monet",
+                        "correct" : true,
+                        "explanation" : "The colors in this painting are primarily tints."
+                    },
+                    {
+                        "id" : "1",
+                        "src" : "/media/tintquiz2option2.jpeg",
+                        "caption" : "Painting by Mark Rothko",
+                        "correct" : false,
+                        "explanation" : "The vibrant colors in this painting are more accurately characterized as pure hues."
+                    }
+                ]
+            },
+            "3" : {
+                "type" : "image_select",
+                "question_text" : "Which of the colors taken from the following image is a tint?",
+                "question_media" : [
+                    {
+                        "src" : "/media/tintquiz3media1.jpeg",
+                        "caption" : "Painting by Picasso"
+                    }
+                ],
+                "options" : [
+                    {
+                        "id" : "0",
+                        "src" : "/media/tintquiz3option1.png",
+                        "caption" : "",
+                        "correct" : false,
+                        "explanation" : "This color is a shade."
+                    },
+                    {
+                        "id" : "1",
+                        "src" : "/media/tintquiz3option2.png",
+                        "caption" : "",
+                        "correct" : true,
+                        "explanation" : "This color is a tint."
+                    },
+                    {
+                        "id" : "2",
+                        "src" : "/media/tintquiz3option3.png",
+                        "caption" : "",
+                        "correct" : false,
+                        "explanation" : "This color is a pure hue."
+                    }
+                ]
+            }
+        }
+    },
+    "tone" : {
+        "learn" : {
+            "1" : {
+                "title": "Tone",
+                "text": "A tone is a hue with grey added to it. Tones typically appear more dull and muted than pure hues, tints or shades.",
+                "media": [
+                    {
+                        "id": 0,
+                        "src" : "/media/tone11.png",
+                        "caption" : "Frame from the film <i>Victoria</i>",
+                        "description" : "This frame is entirely composed of tones of the same blue hue.",
+                        "alt" : "Frame from the film Victoria"
+                    }
+                ]
+            },
+            "2" : {
+                "title": "Tone",
+                "text": "Adding grey to different hues brings them closer together. Therefore tones can be used to make a color palette more harmonious.",
+                "media": [
+                    {
+                        "id": 0,
+                        "src" : "/media/tone21.png",
+                        "caption" : "<i>Sunrise</i> by Claude Monet",
+                        "description" : "The bright orange accent color stands out and does not clash against the muted blue tones of the background",
+                        "alt" : "Sunrise painting by Claude Monet"
+                    }
+                ]
+            }
+        },
+        "quiz" : {
+            "1" : {
+                "type" : "image_select",
+                "question_text" : "Which of the following is a tone of the hue shown",
+                "question_media" : [
+                    {
+                        "src" : "/media/tonequiz1media1.png",
+                        "caption" : ""
+                    }
+                ],
+                "options" : [
+                    {
+                        "id" : "0",
+                        "src" : "/media/tonequiz1option1.png",
+                        "caption" : "",
+                        "correct" : true,
+                        "explanation" : "This is a tone of blue."
+                    },
+                    {
+                        "id" : "1",
+                        "src" : "/media/tonequiz1option2.png",
+                        "caption" : "",
+                        "correct" : false,
+                        "explanation" : "This is a tint of blue."
+                    },
+                    {
+                        "id" : "2",
+                        "src" : "/media/tonequiz1option3.png",
+                        "caption" : "",
+                        "correct" : false,
+                        "explanation" : "This is a shade of blue."
+                    }
+                ]
+            },
+            "2" : {
+                "type" : "image_select",
+                "question_text" : "Which of the colors taken from the following image is a tone?",
+                "question_media" : [
+                    {
+                        "src" : "/media/tonequiz2media1.jpeg",
+                        "caption": "Painting by Wassily Kandinsky"
+                    }
+                ],
+                "options" : [
+                    {
+                        "id" : "0",
+                        "src" : "/media/tonequiz2option1.png",
+                        "caption" : "",
+                        "correct" : false,
+                        "explanation" : "This color is a tint of yellow."
+                    },
+                    {
+                        "id" : "1",
+                        "src" : "/media/tonequiz2option2.png",
+                        "caption" : "",
+                        "correct" : false,
+                        "explanation" : "This color is a pure hue."
+                    },
+                    {
+                        "id" : "2",
+                        "src" : "/media/tonequiz2option3.png",
+                        "caption" : "",
+                        "correct" : true,
+                        "explanation" : "This color is a tone of blue."
+                    }
+                ]
+            },
+            "3" : {
+                "type" : "image_select",
+                "question_text" : "Which of the following 2 images most prominently features tones",
+                "question_media" : [],
+                "options" : [
+                    {
+                        "id" : "0",
+                        "src" : "/media/tonequiz3option1.png",
+                        "caption" : "<i>Christina's World</i> by Andrew Wyeth",
+                        "correct" : true,
+                        "explanation" : "The muted colors in this image are tones"
+                    },
+                    {
+                        "id" : "1",
+                        "src" : "/media/tonequiz3option2.png",
+                        "caption" : "Frame from the film <i>Suspiria</i>",
+                        "correct" : false,
+                        "explanation" : "The colors in this image are too bright to be tones."
+                    }
+                ]
+            }
+        }
+    },
+    "value" : {
+        "learn" : {
+            "1" : {
+                "title": "Value",
+                "text": "Value refers to how light/dark a color is. Lighter colors have higher value, darker colors have lower value. For a given hue, shades have lower value and tints have higher value.",
+                "media": [
+                    {
+                        "id": 0,
+                        "src" : "/media/value11.png",
+                        "caption" : "",
+                        "description" : "Value scale for blue.",
+                        "alt" : "Different values of blue"
+                    }
+                ]
+            },
+            "2" : {
+                "title": "Value",
+                "text": "Some pure hues have higher value than others. For instance, yellow has a higher value than blue. We can see this by comparing the colors when converted to black and white.",
+                "media": [
+                    {
+                        "id": 0,
+                        "src" : "/media/value21.png",
+                        "caption" : "",
+                        "description" : "Pure yellow and blue hues compared to their equivalent greyscale values.",
+                        "alt" : "Pure yellow and blue and their equivalent greyscale values."
+                    }
+                ]
+            }
+        },
+        "quiz" : {
+            "1" : {
+                "type" : "image_select",
+                "question_text" : "Select the image that has lower value",
+                "question_media" : [],
+                "options" : [
+                    {
+                        "id": "0",
+                        "src": "/media/valuequiz1option1.webp",
+                        "caption": "Still frame from <i>Arrival</i> directed by Denis Villeneuve.",
+                        "correct": true,
+                        "explanation": "The colors in this image are darker." 
+                    },
+                    {
+                        "id": "1",
+                        "src": "/media/valuequiz1option2.png",
+                        "caption": "Cover art for <i>True Blue</i> by Madonna",
+                        "correct": false,
+                        "explanation": "The colors in this image are lighter than the other." 
+                    }
+                ]
+            },
+            "2" : {
+                "type" : "image_select",
+                "question_text" : "Select the color with the highest value",
+                "question_media" : [],
+                "options" : [
+                    {
+                        "id": "0",
+                        "src": "/media/valuequiz2option1.png",
+                        "caption": "",
+                        "correct": false,
+                        "explanation": "This color has the lowest value." 
+                    },
+                    {
+                        "id": "1",
+                        "src": "/media/valuequiz2option2.png",
+                        "caption": "",
+                        "correct": true,
+                        "explanation": "This color has the highest value." 
+                    },
+                    {
+                        "id": "2",
+                        "src": "/media/valuequiz2option3.png",
+                        "caption": "",
+                        "correct": false,
+                        "explanation": "This color has the second highest value." 
+                    },
+                    {
+                        "id": "3",
+                        "src": "/media/valuequiz2option4.png",
+                        "caption": "",
+                        "correct": false,
+                        "explanation": "This color has the second lowest value." 
+                    }
+                ]
+            },
+            "3" : {
+                "type" : "image_select",
+                "question_text" : "Select the image with higher value",
+                "question_media" : [],
+                "options" : [
+                    {
+                        "id": "0",
+                        "src": "/media/valuequiz3option1.png",
+                        "caption": "Cover art for <i>Sweetener</i> by Ariana Grande",
+                        "correct": true,
+                        "explanation": "Most of the colors in this image have relatively high value." 
+                    },
+                    {
+                        "id": "1",
+                        "src": "/media/valuequiz3option2.jpeg",
+                        "caption": "Still frame from <i>The Dark Knight</i> directed by Christopher Nolan.",
+                        "correct": false,
+                        "explanation": "The colors in this image are darker." 
+                    }
+                ]
+            }
+        }
+    },
+    "chroma_saturation" : {
+        "learn" : {
+            "1" : {
+                "title": "Chroma/Saturation",
+                "text": "Chroma or saturation refers to how pure a color appears. Adding black, white or grey to a color lowers its chroma. In some contexts, chroma and saturation have slightly different meanings, but for our purposes we will consider them synonyms. Pure hues are the most saturated, while blacks, whites and greys are the least saturated.",
+                "media": [
+                    {
+                        "id": 0,
+                        "src" : "/media/chroma11.png",
+                        "caption" : "",
+                        "description" : "",
+                        "alt" : "example of high chroma vs. low chroma"
+                    }
+                ]
+            },
+            "2" : {
+                "title": "Chroma/Saturation",
+                "text": "Colors with low chroma appear closer together, even if they have very different hues. Therefore lowering the chroma of a color palette can make it feel more harmonious. However, it can also make it feel more dull and reduce contrast.",
+                "media": [
+                    {
+                        "id": 0,
+                        "src" : "/media/chroma21.png",
+                        "caption" : "",
+                        "description" : "These palettes have the same pure hues.",
+                        "alt" : "Image of 2 color palettes"
+                    }
+                ]
+            },
+            "3" : {
+                "title": "Chroma/Saturation",
+                "text": "Kids movies often use highly saturated colors to give a bright, fun energy. Additionally, when paired with moody shades, highly satured colors can create a dark, futuristic city feel.",
+                "media": [
+                    {
+                        "id": 0,
+                        "src" : "/media/chroma31.jpeg",
+                        "caption" : "Frame from the film <i>Luca</i>",
+                        "description" : "Pixar's Luca uses highly saturated colors to give the film a fun, playful aesthetic.",
+                        "alt" : "Frame from the film Luca"
+                    },
+                    {
+                        "id": 1,
+                        "src" : "/media/chroma32.png",
+                        "caption" : "Still frame from <i>Blade Runner 2049</i> directed by Denis Villeneuve.",
+                        "description" : "Saturated neon colors against a dark background in Blade Runner 2049 set the scene of a futuristic cityscape.",
+                        "alt" : "Still frame from <i>Blade Runner 2049</i> directed by Denis Villeneuve"
+                    }
+                ]
+            },
+            "4" : {
+                "title": "Chroma/Saturation",
+                "text": "Low saturation/chroma can give a vintage or muted/melancholy feel",
+                "media": [
+                    {
+                        "id": 0,
+                        "src" : "/media/chroma41.png",
+                        "caption" : "Cover art for <i>1989</i> by Taylor Swift",
+                        "description" : "Low chroma in the cover art for 1989 helps the image look like a vintage polariod.",
+                        "alt" : "Cover art for 1989 by Taylor Swift"
+                    },
+                    {
+                        "id": 1,
+                        "src" : "/media/chroma42.png",
+                        "caption" : "Photograph by Ferran Moya",
+                        "description" : "The muted colors in this photograph create a gloomy look.",
+                        "alt" : "Photograph by Ferran Moya"
+                    }
+                ]
+            }
+        },
+        "quiz" : {
+            "1" : {
+                "type" : "image_select",
+                "question_text" : "Which of the following images is the best example of high chroma/saturation?",
+                "question_media" : [],
+                "options" : [
+                    {
+                        "id" : "0",
+                        "src" : "/media/chromaquiz1option1.jpg",
+                        "caption" : "Still frame from <i>Dune</i> directed by Denis Villeneuve.",
+                        "correct" : false,
+                        "explanation" : "The colors in this image have overall low chroma/saturation."
+                    },
+                    {
+                        "id" : "1",
+                        "src" : "/media/chromaquiz1option2.jpg",
+                        "caption" : "Painting by Joan Miró",
+                        "correct" : true,
+                        "explanation" : "The blue and red in this painting have high chroma/saturation."
+                    }
+                ]
+            },
+            "2" : {
+                "type" : "image_select",
+                "question_text" : "Which of the following images is the best example of low chroma/saturation?",
+                "question_media" : [],
+                "options" : [
+                    {
+                        "id" : "0",
+                        "src" : "/media/chromaquiz2option1.png",
+                        "caption" : "Still frame from <i>Blade Runner 2049</i> directed by Denis Villeneuve.",
+                        "correct" : false,
+                        "explanation" : "The pinks and blues in this image have high chroma."
+                    },
+                    {
+                        "id" : "1",
+                        "src" : "/media/chromaquiz2option2.png",
+                        "caption" : "Cover art for <i>Season of Glass</i> by Yoko Ono",
+                        "correct" : true,
+                        "explanation" : "The colors in this image are very muted and therefore have low chroma/saturation."
+                    }
+                ]
+            },
+        "3" : {
+            "type" : "image_select",
+            "question_text" : "Select the color palette with the lowest chroma",
+            "question_media" : [],
+            "options" : [
+                {
+                    "id" : "0",
+                    "src" : "/media/chromaquiz3option1.png",
+                    "caption" : "",
+                    "correct" : false,
+                    "explanation" : "This palette has high chroma."
+                },
+                {
+                    "id" : "1",
+                    "src" : "/media/chromaquiz3option2.png",
+                    "caption" : "",
+                    "correct" : false,
+                    "explanation" : "Some colors in this palette have high chroma, some colors have low chroma."
+                },
+                {
+                    "id" : "2",
+                    "src" : "/media/chromaquiz3option3.png",
+                    "caption" : "",
+                    "correct" : true,
+                    "explanation" : "This palette is the least saturated overall."
+                }
+            ]
+        }
+        }
+    },
+    "contrast" : {
+        "learn" : {
+            "1" : {
+                "title": "Contrast",
+                "text": "Contrast is a measure of how distinct colors are . High contrast colors are very different, while low contrast colors are very similar. Contrast can be achieved through both hue and value.",
+                "media": [
+                    {
+                        "id": 0,
+                        "src" : "/media/contrast11.png",
+                        "caption" : "Frame from the film <i>The White Ribbon</i>",
+                        "description" : "An example of high value contrast.",
+                        "alt" : "Frame from the film The White Ribbon"
+                    },
+                    {
+                        "id": 1,
+                        "src" : "/media/contrast12.png",
+                        "caption" : "Frame from Pixar's <i>Finding Dory</i>",
+                        "description" : "An example of high hue contrast. The bright orange and yellow contrast against the blue hues.",
+                        "alt" : "Frame from Pixar's Finding Dory"
+                    }
+                ]
+            },
+            "2" : {
+                "title": "Contrast",
+                "text": "Very high contrast images can create a jarring, striking effect.",
+                "media": [
+                    {
+                        "id": 0,
+                        "src" : "/media/contrast21.png",
+                        "caption" : "Frame from the film <i>The Lighthouse</i>",
+                        "description" : "",
+                        "alt" : "Frame from the film The Lighthouse"
+                    }
+                ]
+            },
+            "3" : {
+                "title": "Contrast",
+                "text": "Low contrast images can create a hazy feel.",
+                "media": [
+                    {
+                        "id": 0,
+                        "src" : "/media/contrast31.png",
+                        "caption" : "Still frame from <i>Blade Runner 2049</i> directed by Denis Villeneuve.",
+                        "description" : "",
+                        "alt" : "Frame from Blade Runner 2049"
+                    }
+                ]
+            }
+        },
+        "quiz" : {
+            "1" : {
+                "type" : "image_select",
+                "question_text" : "Select the image with higher contrast",
+                "question_media" : [],
+                "options" : [
+                    {
+                        "id": "0",
+                        "src": "/media/contrastquiz1option1.png",
+                        "caption": "Cover art for <i>The Fame Monster</i> by Lady Gaga",
+                        "correct": true,
+                        "explanation": "The colors in this image have very different value." 
+                    },
+                    {
+                        "id": "1",
+                        "src": "/media/contrastquiz1option2.jpeg",
+                        "caption": "Painting by Mark Rothko",
+                        "correct": false,
+                        "explanation": "The colors in this image have similar hue and value and are therefore low contrast." 
+                    }
+                ]
+            },
+            "2" : {
+                "type" : "multiple_choice",
+                "question_text" : "The following image is an example of:",
+                "question_media" : [
+                    {
+                        "src" : "/media/contrastquiz2media1.jpeg",
+                        "caption": "Photograph by Craig Whitehead"
+                    }
+                ],
+                "options" : [
+                    {
+                        "id" : "0",
+                        "text" : "High hue contrast and high value contrast",
+                        "correct" : false,
+                        "explanation" : "The hues do not have high contrast"
+                    },
+                    {
+                        "id" : "1",
+                        "text" : "Low hue contrast and low value contrast",
+                        "correct" : false,
+                        "explanation" : "The black and white background has high value contrast"
+                    },
+                    {
+                        "id" : "2",
+                        "text" : "High hue contrast and low value contrast",
+                        "correct" : false,
+                        "explanation" : "The hues do not have high contrast, the background has high value contrast."
+                    },
+                    {
+                        "id" : "3",
+                        "text" : "Low hue contrast and high value contrast",
+                        "correct" : true,
+                        "explanation" : "The hues do not have high contrast, but the black and white background has high value contrast."
+                    }
+                ]
+            },
+            "3" : {
+                "type" : "image_select",
+                "question_text" : "Select the image with lower constrast",
+                "question_media" : [],
+                "options" : [
+                    {
+                        "id": "0",
+                        "src": "/media/contrastquiz3option1.jpeg",
+                        "caption": "Still frame from <i>2001: A Space Odyssey</i> directed by Stanley Kubrick.",
+                        "correct": false,
+                        "explanation": "This frame has relatively high contrast" 
+                    },
+                    {
+                        "id": "1",
+                        "src": "/media/contrastquiz3option2.png",
+                        "caption": "Still frame from <i>2001: A Space Odyssey</i> directed by Stanley Kubrick.",
+                        "correct": true,
+                        "explanation": "This frame has relatively low contrast." 
+                    }
+                ]
+            }
+        }
+    },
+    "final" : {
+        "quiz" : {
+            "1" : {
+                "type" : "image_select",
+                "question_text" : "Select the image with pure hues",
+                "question_media" : [],
+                "options" : [
+                    {
+                        "id": "0",
+                        "src": "/media/finalquiz1option1.webp",
+                        "caption": "Painting by Mark Rothko",
+                        "correct": false,
+                        "explanation": "The colors in this image are shades and tones." 
+                    },
+                    {
+                        "id": "1",
+                        "src": "/media/finalquiz1option2.webp",
+                        "caption": "Painting by Roy Lichtenstein",
+                        "correct": true,
+                        "explanation": "The yellow, blue and red in this image are pure hues" 
+                    }
+                ]
+            },
+            "2" : {
+                "type" : "multiple_choice",
+                "question_text" : "The following painting is an example of:",
+                "question_media" : [
+                    {
+                        "src" : "/media/finalquiz2media1.webp",
+                        "caption" : "<i>Nighthawks</i> by Edward Hopper"
+                    }
+                ],
+                "options" : [
+                    {
+                        "id" : "0",
+                        "text" : "Low value and low contrast",
+                        "correct" : false,
+                        "explanation" : "This painting does not have particularly low contrast"
+                    },
+                    {
+                        "id" : "1",
+                        "text" : "High value and tints",
+                        "correct" : false,
+                        "explanation" : "A majority of the colors have low value and are not tints."
+                    },
+                    {
+                        "id" : "2",
+                        "text" : "Low value and shades",
+                        "correct" : true,
+                        "explanation" : "Many of the colors in this painting are shades, giving it an overall low value."
+                    },
+                    {
+                        "id" : "3",
+                        "text" : "High chroma and tones",
+                        "correct" : false,
+                        "explanation" : "This painting does not have particularly high chroma."
+                    }
+                ]
+            },
+            "3" : {
+                "type" : "image_select",
+                "question_text" : "Which of the colors taken from the following image has lowest value?",
+                "question_media" : [
+                    {
+                        "src" : "/media/finalquiz3media1.jpeg",
+                        "caption" : "Frame from the film <i>Marie Antoinette</i> Directed by Sofia Coppola"
+                    }
+                ],
+                "options" : [
+                    {
+                        "id" : "0",
+                        "src" : "/media/finalquiz3option1.png",
+                        "caption" : "",
+                        "correct": false,
+                        "explanation" : "This color does not have the lowest value."
+                    },
+                    {
+                        "id" : "1",
+                        "src" : "/media/finalquiz3option2.png",
+                        "caption" : "",
+                        "correct": false,
+                        "explanation" : "This color has high value."
+                    },
+                    {
+                        "id" : "2",
+                        "src" : "/media/finalquiz3option3.png",
+                        "caption" : "",
+                        "correct": false,
+                        "explanation" : "This color has high value."
+                    },
+                    {
+                        "id" : "3",
+                        "src" : "/media/finalquiz3option4.png",
+                        "caption" : "",
+                        "correct": true,
+                        "explanation" : "This is the darkest color."
+                    }
+                ]
+            },
+            "4" : {
+                "type" : "multiple_choice",
+                "question_text" : "The dominant colors in this image are:",
+                "question_media" : [
+                    {
+                        "src" : "/media/finalquiz4media1.png",
+                        "caption" : "Cover art for <i>Jubilee</i> by Japanese Breakfast"
+                    }
+                ],
+                "options" : [
+                    {
+                        "id" : "0",
+                        "text" : "Tints",
+                        "correct" : true,
+                        "explanation" : "The prominent colors in this image are tints of yellow."
+                    },
+                    {
+                        "id" : "1",
+                        "text" : "Shades",
+                        "correct" : false,
+                        "explanation" : "While there are some shades in this image, they are not most prominent."
+                    },
+                    {
+                        "id" : "2",
+                        "text" : "Pure hues",
+                        "correct" : false,
+                        "explanation" : "The colors in this image are too muted to be pure hues."
+                    }
+                ]
+            },
+            "5" : {
+                "type" : "multiple_choice",
+                "question_text" : "This painting is an example of:",
+                "question_media" : [
+                    {
+                        "src" : "/media/finalquiz5media1.png",
+                        "caption" : "<i>White on White</i> by Kazimir Malevich"
+                    }
+                ],
+                "options" : [
+                    {
+                        "id" : "0",
+                        "text" : "High contrast",
+                        "correct" : false,
+                        "explanation" : "This image has very low contrast since the colors are close together in both hue and value."
+                    },
+                    {
+                        "id" : "1",
+                        "text" : "Low saturation",
+                        "correct" : true,
+                        "explanation" : "These colors have very low chroma."
+                    },
+                    {
+                        "id" : "2",
+                        "text" : "Shades",
+                        "correct" : false,
+                        "explanation" : "There are no shades in this image."
+                    },
+                    {
+                        "id" : "3",
+                        "text" : "Low value",
+                        "correct" : false,
+                        "explanation" : "Remember that low value is darker."
+                    }
+                ]
+            },
+            "6" : {
+                "type" : "image_select",
+                    "question_text" : "Select the more saturated image",
+                    "question_media" : [],
+                    "options" : [
+                        {
+                            "id" : "0",
+                            "src" : "/media/finalquiz6option1.png",
+                            "caption" : "Cover art for <i>Enema of the State</i> by Blink-182",
+                            "correct" : true,
+                            "explanation" : "The colors in this image are brighter."
+                        },
+                        {
+                            "id" : "1",
+                            "src" : "/media/finalquiz6option2.png",
+                            "caption" : "<i>Morning Sun</i> by Edward Hopper",
+                            "correct" : false,
+                            "explanation" : "The colors in this image are more muted, meaning it is less saturated."
+                        }
+                    ]
+            },
+            "7" : {
+                "type" : "multiple_choice",
+                "question_text" : "This painting is an example of:",
+                "question_media" : [
+                    {
+                        "src" : "/media/finalquiz7media1.png",
+                        "caption" : "<i>The Piano Lesson</i> by Henri Matisse"
+                    }
+                ],
+                "options" : [
+                    {
+                        "id" : "0",
+                        "text" : "High Chroma",
+                        "correct" : false,
+                        "explanation" : "The colors in this image have low chroma."
+                    },
+                    {
+                        "id" : "1",
+                        "text" : "Shades",
+                        "correct" : false,
+                        "explanation" : "The most dominant colors in this image are not shades."
+                    },
+                    {
+                        "id" : "2",
+                        "text" : "Pure hues",
+                        "correct" : false,
+                        "explanation" : "There are no pure hues in this image"
+                    },
+                    {
+                        "id" : "3",
+                        "text" : "Tones",
+                        "correct" : true,
+                        "explanation" : "Most of the colors in this image are tones."
+                    }
+                ]
+            },
+            "8" : {
+                "type" : "multiple_choice",
+                "question_text" : "What do these 2 images have in common?",
+                "question_media" : [
+                    {
+                        "src" : "/media/finalquiz8media1.jpeg",
+                        "caption" : "Painting by Ellsworth Kelly"
+                    },
+                    {
+                        "src" : "/media/finalquiz8media2.png",
+                        "caption" : "Painting by Piet Mondrian"
+                    }
+                ],
+                "options" : [
+                    {
+                        "id" : "0",
+                        "text" : "High value",
+                        "correct" : false,
+                        "explanation" : "Neither of these paintings have particularly high value"
+                    },
+                    {
+                        "id" : "1",
+                        "text" : "Tints",
+                        "correct" : false,
+                        "explanation" : "Neither of these paintings prominently feature tints"
+                    },
+                    {
+                        "id" : "2",
+                        "text" : "High Chroma",
+                        "correct" : true,
+                        "explanation" : "The colors in both images are very saturated"
+                    },
+                    {
+                        "id" : "3",
+                        "text" : "Low contrast",
+                        "correct" : false,
+                        "explanation" : "Both of these images have reasonably high contrast."
+                    }
+                ]
+            },
+            "9" : {
+                "type" : "image_select",
+                "question_text" : "Select the image with higher contrast",
+                "question_media" : [],
+                "options" : [
+                    {
+                        "id" : "0",
+                        "src" : "/media/finalquiz9option1.jpeg",
+                        "caption" : "Still frame from <i>The Grand Buhdapest Hotel</i> directed by Wes Anderson.",
+                        "correct" : false,
+                        "explanation" : ""
+                    },
+                    {
+                        "id" : "1",
+                        "src" : "/media/finalquiz9option2.png",
+                        "caption" : "Still frame from <i>Kill Bill</i> directed by Quentin Tarantino.",
+                        "correct" : true,
+                        "explanation" : "This frame has relatively high contrast."
+                    }
+                ]
+            },
+            "10" : {
+                "type" : "multiple_choice",
+                "question_text" : "What type of colors are most prominent in this painting?",
+                "question_media" : [
+                    {
+                        "src" : "/media/finalquiz10media1.png",
+                        "caption" : "Painting by Edward Hopper"
+                    }
+                ],
+                "options" : [
+                    {
+                        "id" : "0",
+                        "text" : "Tints",
+                        "correct" : true,
+                        "explanation" : "The colors in this image are primarily tints"
+                    },
+                    {
+                        "id" : "1",
+                        "text" : "Shades",
+                        "correct" : false,
+                        "explanation" : "Shades are dark, the colors in this image are primarily light."
+                    },
+                    {
+                        "id" : "2",
+                        "text" : "Pure hues",
+                        "correct" : false,
+                        "explanation" : "The colors in this image are too muted to be pure hues"
+                    },
+                    {
+                        "id" : "3",
+                        "text" : "Tones",
+                        "correct" : true,
+                        "explanation" : "There are some tones in this image but they are not the most prominent type of colors."
+                    }
+                ]
+            }
+        }
+    },
+    "answers" : {
+        "hue" : ["2", "2", "1"],
+        "shade" : ["2", "0", "2"],
+        "tint" : ["0", "0", "1"],
+        "tone" : ["0", "2", "0"],
+        "chroma_saturation" : ["1", "1", "2"],
+        "value" : ["0", "1", "0"],
+        "contrast" : ["0", "3", "1"],
+        "final" : ["1", "2", "3", "0", "1", "0", "3", "2", "1", "0"]
+    }
+}

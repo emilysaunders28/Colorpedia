@@ -1,0 +1,137 @@
+#homepage {
+    background-color: white;
+    color: black;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 0px;
+    min-width: fit-content;
+    width: fit-content;
+    min-height: 750px;
+    position: relative;
+}
+@media (max-width: 700px) {
+    #homepage {
+        min-width: 700px;
+    }
+}
+
+
+.homepage-nav-row {
+    background-color: #ceffea;
+    padding: 40px;
+}
+
+#homepage-caption {
+    font-size: .75rem;
+    position: absolute;
+    bottom: 15px;
+}
+
+.homepage-intro {
+    font-size: 1.3rem;
+    padding: 0px 70px;
+}
+
+.logo-image {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#homepage h6 {
+    font-size: 1.2rem;
+    padding-top: 30px;
+}
+
+.homepage-nav {
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    border: 4px solid #ccff87;
+    font-size: 1rem;
+    margin: 10px;
+    padding: 20px;
+}
+
+.homepage-nav .homepage-nav-title h2{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.homepage-nav .homepage-nav-links a{
+    text-decoration: none;
+    color: #ff0000;
+}
+.homepage-nav .homepage-nav-links a:hover{
+    text-decoration: underline;
+    color: #f9b023;
+}
+
+.bi {
+    color: #ff0000;
+}
+
+.homepage-nav.final {
+    min-height: 153.91px; 
+}
+
+.homepage-nav.final a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.homepage-user-info {
+    font-size: 1rem;
+    padding: 10px 20px 10px 20px;
+    background-color: #ceffea;
+}
+.homepage-user-info button.homepage-logout {
+    font-size: 1rem;
+}
+
+button.btn.homepage-button {
+    background-color: white;
+    margin: 30px;
+    border: 4px solid #ccff87;
+    color: black;
+}
+
+button.btn.homepage-button:hover {
+    background-color: #ccff87;
+    opacity: 1;
+}
+
+button.btn.homepage-button:active {
+    background-color: #ccff87;
+    border: 4px solid #ceffea;
+    color: black;
+}
+
+button.btn.homepage-logout:focus {
+    background-color: #ccff87;
+    border: 4px solid #ceffea;
+    color: black;
+}
+
+button.btn.homepage-logout {
+    background-color: white;
+    border: 4px solid #ccff87;
+    color: black;
+}
+
+button.btn.homepage-logout:hover {
+    background-color: #ccff87;
+    opacity: 1;
+}
+
+.homepage-logout-col {
+    text-align: right;
+}
+
+.logged-in-as {
+    text-align: left;
+}

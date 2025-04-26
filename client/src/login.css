@@ -1,0 +1,109 @@
+
+.login-container {
+    display: flex;
+    color: black;
+    padding-top: 50px;
+}
+
+.login-welcome {
+    color: black;
+    min-width: 55vw;
+    padding-top: 50px;
+    position: relative;
+    text-align: center;
+}
+
+.login-logo {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.login-welcome p {
+    font-size: 1.2em;
+    justify-content: center;
+}
+
+#error-message {
+    color: #ff0000;
+}
+
+@media (min-width: 992px) {
+    .login-welcome p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .login-welcome p {
+        font-size: 1.5rem;
+    }
+}
+
+.login-form-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content horizontally */
+    padding: 0px 20px 0px 20px;
+}
+  
+.login-form {
+    width: 100%;
+    max-width: 400px; /* Controls form width */
+    padding: 20px;
+    border: 4px solid #ccff87;
+    color: black;
+    border-radius: 8px;
+    background-color: #ceffea;
+}
+
+.login-form .btn {
+    background-color: white;
+    color: black;
+    border: none;
+    border: 4px solid #ccff87;
+}
+
+.login-form .btn:focus {
+    background-color: #ccff87;
+    border: 4px solid #ceffea;
+    color: black;
+}
+
+.login-form input {
+    max-width: 300px;
+    border: none;
+    color: black;
+    border: 4px solid #ccff87;
+}
+
+.login-form input::placeholder {
+    color: lightgrey;
+}
+
+.login-form .btn.btn-dark:hover {
+    background-color: #ccff87;
+    border: 4px solid #ceffea;
+    color: black;
+}
+
+.login-form .form-label {
+    color: black;
+    font-size: .9em;
+}
+  
+.login-form-container .row {
+    padding: 30px;
+}
+
+.login-form-row {
+    margin-top: 0px;
+}
+  
+.login-caption {
+    font-size: x-small;
+    font-weight: lighter;
+    position: absolute;
+    bottom: 20px;
+}
+  
