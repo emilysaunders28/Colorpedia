@@ -4,31 +4,39 @@ import Image from 'react-bootstrap/esm/Image';
 import { useState,useEffect } from 'react';
 
 const Media = (props) => {
-    const [current, setCurrent] = useState(0)
-    const media = props.media
+    const [current, setCurrent] = useState('0')
+    const [media, setMedia] = useState(props.media)
     const term = props.term
+    const page = props.page
     const currentMedia = media[current]
     const caption = currentMedia.caption
     const description = currentMedia.description
     const alt = currentMedia.alt
     const src = currentMedia.src
     const url = window.location.href
-    
+    console.log("current", current)
+    console.log("page", page)
 
-    const handleClick = (index,event) => {
-        event.preventDefault()
-        setCurrent(index)
-    }
+
+    useEffect(() => {
+        setCurrent('0')
+        setMedia(props.media)
+    }, [page, term, media])
 
     return (
         <>
             <Card className={'my-card ' + term}>
             <Card.Header>
-                <Nav className={term} variant="tabs" defaultActiveKey={`${url}/#${current}`}>
+                <Nav 
+                    className={term} 
+                    variant="tabs" 
+                    activeKey={current}
+                    onSelect={key => setCurrent(key)}
+                >
                 {media.map((media,index) => {
                     return (
                         <Nav.Item key={index}> 
-                            <Nav.Link href={`${url}/#${index}`} onClick={(event) => handleClick(index,event)}>{`Example ${index + 1}`}</Nav.Link>
+                            <Nav.Link eventKey={index}>{`Example ${index + 1}`}</Nav.Link>
                         </Nav.Item>
                     )
                 })}

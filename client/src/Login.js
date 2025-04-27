@@ -4,14 +4,14 @@ import Container from 'react-bootstrap/esm/Container';
 import Row from 'react-bootstrap/esm/Row';
 import { useState } from 'react';
 import Col from 'react-bootstrap/esm/Col';
+import { useNavigate, Link } from 'react-router-dom';
 
 const Login = (props) => {
     const [user, setUser] = useState('');
     const [newUser, setNewUser] = useState('');
     const [password, setPassword] = useState('');
     const [newPassword, setNewPassword] = useState('');
-    const [userError, setUserError] = useState('');
-    const [newUserError, setNewUserError] = useState('');
+    const navigate = useNavigate();
 
     const handleUserSubmit = (e) => {
         e.preventDefault();
@@ -36,8 +36,9 @@ const Login = (props) => {
               const msg = body.data?.error || "An unknown error occurred.";
               errorEl.innerText = msg;
             } else {
+              props.setUserInfo(body.data);
               // success → redirect
-              window.location.href = "/";
+              navigate('/');
             }
           })
           .catch(err => {
@@ -69,8 +70,9 @@ const Login = (props) => {
               const msg = body.data?.error || "Something went wrong.";
               if (errorEl) errorEl.innerText = msg;
             } else {
+              props.setUserInfo(body.data);
               // success!
-              window.location.href = "/";
+              navigate('/');
             }
           })
           .catch(err => {

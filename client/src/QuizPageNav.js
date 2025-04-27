@@ -1,5 +1,6 @@
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
+import { Link } from 'react-router-dom'
 
 const QuizPageNav = (props) => {
     const currentPage = props.currentPage
@@ -9,7 +10,7 @@ const QuizPageNav = (props) => {
     const nextTerm = props.nextTerm
     const nextTermTitle = props.nextTermTitle
     const type = props.type
-    const disabled = !(props.submitted && Boolean(props.selected) && props.options[props.selected]['correct'])
+    const disabled = !(props.submitted && Boolean(props.selected) && props.options?.[props.selected]?.correct);
 
     const url = term==='final' ? `/${term}/` : `/${term}/${type}/`
 
@@ -22,8 +23,9 @@ const QuizPageNav = (props) => {
             <Nav>
             {pageList.map(number => {
                 return <Nav.Link 
+                    as={Link}
                     key={number}
-                    href={`${url}${number}`} 
+                    to={`${url}${number}`} 
                     className={`quiz-page-number ${number===currentPage && 'current'}`}
                     disabled={!(number===currentPage)}
                 >
@@ -31,10 +33,10 @@ const QuizPageNav = (props) => {
                 </Nav.Link>
             })}
             {currentPage !== numberOfPages &&
-                <Nav.Link className='back-next' href={nextPageURL} disabled={disabled}>Next</Nav.Link>
+                <Nav.Link as={Link} className='back-next' to={nextPageURL} disabled={disabled}>Next</Nav.Link>
             }
-            {currentPage === numberOfPages && term !== 'final' && <Nav.Link className='next-term' href={nextTermUrl} disabled={disabled}>{nextTermTitle}</Nav.Link>}
-            {currentPage === numberOfPages && term === 'final' && <Nav.Link className='next-term' href='/' disabled={disabled}>Home</Nav.Link>}  
+            {currentPage === numberOfPages && term !== 'final' && <Nav.Link as={Link} className='next-term' to={nextTermUrl} disabled={disabled}>{nextTermTitle}</Nav.Link>}
+            {currentPage === numberOfPages && term === 'final' && <Nav.Link as={Link} className='next-term' to='/' disabled={disabled}>Home</Nav.Link>}  
             </Nav>
         </Navbar>
     );

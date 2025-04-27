@@ -1,26 +1,44 @@
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import Col from 'react-bootstrap/esm/Col';
 import Row from 'react-bootstrap/esm/Row';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const QuizFormText = (props) => {
-    const options = props.options
+    const [options, setOptions] = useState(props.options)
     const question = props.question
+    const userInfo = props.userInfo
+    const setUserInfo = props.setUserInfo
+    const selected = props.selected
     
+        useEffect(() => {
+            setOptions(props.options)
+        }
+            , [props.options])
+
     const handleSubmit = (e) => {
         e.preventDefault()
         props.setSubmitted(true)
-        const selected = props.selected
         const data = { selected, question }
-        console.log(data)
+
+        userInfo['quiz_data']['quiz'][props.term][parseInt(props.page)-1] = selected
+        setUserInfo(userInfo)
+
         fetch('/quiz', {
             method: 'POST',
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(data)
         }).then(res => {
-            console.log(res)
-        })
+            if(!res.ok) {
+              throw Error('Error submitting quiz');
+            }
+            return res.json();
+          })
+          .then((data) => {
+            setUserInfo(data['data'])
+          })
+          .catch(err => {
+            console.log(err.message);
+          });
     }
 
     const handleRetry = () => {

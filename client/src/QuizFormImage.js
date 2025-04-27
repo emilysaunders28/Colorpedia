@@ -3,36 +3,54 @@ import Figure from 'react-bootstrap/Figure'
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/esm/Col';
 import Row from 'react-bootstrap/esm/Row';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const QuizFormImage = (props) => {
-    const options = props.options
+    const [options, setOptions] = useState(props.options)
     const question = props.question
+    const userInfo = props.userInfo
+    const setUserInfo = props.setUserInfo
+    const selected = props.selected
+    const setSelected = props.setSelected
+    const submitted = props.submitted
+    const setSubmitted = props.setSubmitted
+
+    useEffect(() => {
+        setOptions(props.options)
+        console.log("Updating options with useEffect:", options)}
+        , [props.options])
     
     const handleSubmit = (e) => {
         e.preventDefault()
-        props.setSubmitted(true)
-        const selected = props.selected
+        setSubmitted(true)
         const data = { selected, question }
-        console.log(data)
-        console.log(data)
+
         fetch('/quiz', {
             method: 'POST',
             credentials: 'include',
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(data)
         }).then(res => {
-            console.log(res)
-        })
+            if(!res.ok) {
+              throw Error('Error submitting quiz');
+            }
+            return res.json();
+          })
+          .then((data) => {
+            setUserInfo(data['data'])
+          })
+          .catch(err => {
+            console.log(err.message);
+          });
     }
 
     const handleRetry = () => {
-        props.setSubmitted(false)
-        props.setSelected('')
+        setSubmitted(false)
+        setSelected('')
     }
 
     const handleChange = (e) => {
-        props.setSelected(e.target.value)
+        setSelected(e.target.value)
     }
 
     return (<Form className='image-form'>
@@ -42,7 +60,7 @@ const QuizFormImage = (props) => {
                     <Form.Check 
                         type='radio' 
                         className='image-input'
-                        disabled={props.submitted}
+                        disabled={submitted}
                         label={
                             <Figure className='quiz-option-image'>
                                 <Figure.Image src={option.src}/>
@@ -52,7 +70,7 @@ const QuizFormImage = (props) => {
                             </Figure>
                         }
                         value={option.id}
-                        checked={props.selected === option.id}
+                        checked={selected === option.id}
                         onChange={handleChange}
                     />
                     </Col>
@@ -60,15 +78,18 @@ const QuizFormImage = (props) => {
                 })}
             </Form.Group>
             <Row>
-                {props.submitted && props.selected===options[props.selected].id &&
-                    <div className={options[props.selected].correct ? 'correct feedback' : 'incorrect feedback'}>
-                        {options[props.selected].explanation}
-                    </div>
-                }
+            {submitted && selected && options[selected] && selected === options[selected].id &&
+                <div className={options[selected].correct ? 'correct feedback' : 'incorrect feedback'}>
+                    {options[selected].explanation}
+                </div>
+            }
             </Row>
             <Row>
-                {!props.submitted && <Button className='quiz-button' type='submit' onClick={handleSubmit} disabled={!Boolean(props.selected)}>Submit</Button>}
-                {props.submitted && !options[props.selected].correct && <Button className='quiz-button' onClick={handleRetry} >Retry</Button>}
+            {!submitted && <Button className='quiz-button' type='submit' onClick={handleSubmit} disabled={!Boolean(selected)}>Submit</Button>}
+
+            {submitted && selected && options[selected] && !options[selected].correct &&
+                <Button className='quiz-button' onClick={handleRetry}>Retry</Button>
+            }
             </Row>
         </Form>
     );

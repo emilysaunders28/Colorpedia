@@ -1,22 +1,25 @@
 import Container from "react-bootstrap/esm/Container";
-import MyNav from "./MyNav";
 import Row from "react-bootstrap/esm/Row";
-import Col from "react-bootstrap/esm/Col"
+import Col from "react-bootstrap/esm/Col";
+import { useNavigate, Link } from "react-router-dom";
 
 const HomePage = (props) => {
     const userInfo = props.userInfo
+    const setUserInfo = props.setUserInfo
     const quizData = userInfo['quiz_data']
     const progress = quizData['progress']
     const titles = ['Hue', 'Shade', 'Tint', 'Tone', 'Chroma', 'Value', 'Contrast']
     const urls = ['hue', 'shade', 'tint', 'tone', 'chroma_saturation', 'value', 'contrast']
+    const navigate = useNavigate();
 
     const handleLogout = (e) => {
         e.preventDefault();
         fetch('/logout', {
           method: 'GET',
-          credentials: 'include' // 🔥 this is the key
+          credentials: 'include'
         }).then(() => {
-          window.location.href = '/login';
+          setUserInfo({"user" : null});
+          navigate('/login');
         });
       };
 
@@ -37,9 +40,9 @@ const HomePage = (props) => {
                     </Col>
                 </Row>
                 <Row>
-                    <a href="/hue/learn/1">
+                    <Link to="/hue/learn/1">
                         <button className="btn btn-lg homepage-button">Start Learning</button>
-                    </a>
+                    </Link>
                 </Row>
                 <Row className="homepage-nav-row">
                     {titles.map((term, index) => {
@@ -50,8 +53,8 @@ const HomePage = (props) => {
                                         <h2><i className={progress[urls[index]] ? "bi bi-check-circle-fill" : "bi bi-check-circle"}></i></h2><h2>{term}</h2>
                                     </Row>
                                     <Row className="homepage-nav-links">
-                                        <a href={`/${urls[index]}/learn/1`}>Learn</a>
-                                        <a href={`/${urls[index]}/quiz/1`}>Quiz</a>
+                                        <Link to={`/${urls[index]}/learn/1`}>Learn</Link>
+                                        <Link to={`/${urls[index]}/quiz/1`}>Quiz</Link>
                                     </Row>
                                 </div>
                             </Col>
@@ -60,9 +63,9 @@ const HomePage = (props) => {
                     <Col xs={4} md={3} xl={2}>
                         <div className="homepage-nav final">
                             <Row className="homepage-nav-title">
-                                <a href="/final/1">
+                                <Link to="/final/1">
                                 <h2><i className={progress['final'] ? "bi bi-check-circle-fill" : "bi bi-check-circle"}></i></h2><h2>Final Quiz</h2>
-                                </a>
+                                </Link>
                             </Row>
                         </div>
                     </Col>

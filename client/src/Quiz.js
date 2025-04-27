@@ -1,5 +1,4 @@
 import Sidebar from "./Sidebar";
-import MyNav from "./MyNav";
 import QuizPageNav from "./QuizPageNav";
 import QuizFormImage from "./QuizFormImage";
 import QuizFormText from "./QuizFormText";
@@ -9,12 +8,13 @@ import Col from 'react-bootstrap/esm/Col';
 import useFetch from "./useFetch";
 import Figure from 'react-bootstrap/Figure'
 import { useParams } from "react-router-dom";
-import { useState } from 'react';
+import { useState, useEffect, use } from 'react';
 
 const Quiz = (props) => {
     const userInfo = props.userInfo
+    const setUserInfo = props.setUserInfo
     const quizData = userInfo['quiz_data']
-    const term = props.term
+    const [term, setTerm] = useState(props.term)
     const { page } = useParams();
     const [selected,setSelected] = useState(quizData['quiz'][term][parseInt(page)-1]);
     const [submitted, setSubmitted] = useState(Boolean(selected))
@@ -24,11 +24,21 @@ const Quiz = (props) => {
 
     const { data: questions, isPending, error } = useFetch('/data/quiz/' + term);
 
+    useEffect(() => {
+        setTerm(props.term)
+        }
+    , [props.term])
+
+    useEffect(() => {
+        setSelected(quizData['quiz'][term][parseInt(page)-1]);
+        setSubmitted(Boolean(quizData['quiz'][term][parseInt(page)-1]));
+    }, [page, term]);
+
 
     return (
         <>
             <div className="flex">
-            <Sidebar term={term} type={'quiz'} userInfo={userInfo} />
+            <Sidebar term={term} type={'quiz'} userInfo={userInfo} setUserInfo={setUserInfo} />
                 <div id='content'>
                     { !questions && isPending ? <h1>Loading Page...</h1> : <h1>{error}</h1> }
                     { !error && questions && Object.keys(questions).length + 1 > page &&
@@ -60,25 +70,33 @@ const Quiz = (props) => {
                                     <QuizFormImage 
                                         options={questions[page]['options']} 
                                         question={{"term" : term, "id": page}} 
+                                        userInfo={userInfo}
+                                        setUserInfo={setUserInfo}
                                         selected={selected}
-                                        setSelected={setSelected}
+                                        setSelected={setSelected} 
                                         submitted={submitted}
                                         setSubmitted={setSubmitted}
+                                        page={page}
+                                        term={term}
                                     />}
                                     {questions[page]['type']==='multiple_choice' && 
                                     <QuizFormText 
                                         options={questions[page]['options']} 
                                         question={{"term" : term, "id": page}} 
+                                        userInfo={userInfo}
+                                        setUserInfo={setUserInfo}
                                         selected={selected}
-                                        setSelected={setSelected}
+                                        setSelected={setSelected}  
                                         submitted={submitted}
                                         setSubmitted={setSubmitted}
+                                        page={page}
+                                        term={term}
                                     />}
                                 </Row>
                                 { questions && 
                                     <QuizPageNav 
                                         currentPage={parseInt(page)} 
-                                        term={term} 
+                                        term={term}
                                         numberOfPages={Object.keys(questions).length} 
                                         type={'quiz'} 
                                         options={questions[page]['options']}

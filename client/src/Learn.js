@@ -1,5 +1,4 @@
 import Sidebar from "./Sidebar";
-import MyNav from "./MyNav";
 import PageNav from "./PageNav";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -9,6 +8,7 @@ import { useParams } from "react-router-dom";
 
 const Learn = (props) => {
     const userInfo = props.userInfo
+    const setUserInfo = props.setUserInfo
     const { page } = useParams();
     const term = props.term
     const { data: content, isPending, error } = useFetch('/data/learn/' + term);
@@ -17,7 +17,7 @@ const Learn = (props) => {
         <>
             {/* <MyNav user={userInfo['user']} term={term}/> */}
             <div className="flex">
-                <Sidebar term={term} type={'learn'} userInfo={userInfo} />
+                <Sidebar term={term} type={'learn'} userInfo={userInfo} setUserInfo={setUserInfo} />
                 <div id='content'>
                     { !content && isPending ? <h1>Loading Page...</h1> : <h1>{error}</h1> }
                     { !error && content && Object.keys(content).length + 1 > page &&
@@ -30,7 +30,7 @@ const Learn = (props) => {
                                     <div className="learn-text">{content[page].text}</div>
                                 </Row>
                                 <Row>
-                                    <Media term={term} media={content[page].media}/>
+                                    <Media term={term} media={content[page].media} page={page}/>
                                 </Row>
                             </Container>
                     }

@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request, session
+from flask import Flask, jsonify, request
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 from sqlalchemy.orm.attributes import flag_modified
@@ -7,7 +7,7 @@ import json
 
 app = Flask(
     __name__,
-    static_folder='build',
+    static_folder='client/build',
     static_url_path='/'
 )
 
@@ -15,9 +15,6 @@ app.secret_key = '4d9a9fa7d22a7bb23469d1ec927ed0b244fc0f6d03f4ac3eab2795e2156c5d
 
 login_manager = LoginManager()
 login_manager.init_app(app)
-
-
-
 
 # Configure SQLite database
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
@@ -86,6 +83,13 @@ def generate_user_array():
 @login_manager.unauthorized_handler
 def unauthorized_callback():
     return jsonify({'error': 'User not logged in'}), 401
+
+
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def serve_react(path):
+    return app.send_static_file('index.html')
+
 
 # Fetch user data refactored
 @app.route('/data/user')
@@ -175,7 +179,7 @@ def quiz():
     flag_modified(user, 'quiz_data')
     db.session.commit()
 
-    return jsonify({'message': f"Successfully updated {term} quiz question {question_id} answer to {selected}"})
+    return jsonify(data={'user': user.username, 'quiz_data': user.quiz_data})
 
 
 
