@@ -49,9 +49,9 @@ class User(UserMixin, db.Model):
 def load_user(user_id):
     return User.query.get(int(user_id))
 
-# Create the database and tables (if they don't already exist)
-with app.app_context():
-    db.create_all()
+# # Create the database and tables (if they don't already exist)
+# with app.app_context():
+#     db.create_all()
 
 # Load the content data
 path = 'backend/content.json'
