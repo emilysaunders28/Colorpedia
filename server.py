@@ -4,6 +4,7 @@ from flask_login import LoginManager, UserMixin, login_user, login_required, log
 from sqlalchemy.orm.attributes import flag_modified
 from werkzeug.security import generate_password_hash, check_password_hash
 import json
+import os
 
 app = Flask(
     __name__,
@@ -11,7 +12,7 @@ app = Flask(
     static_url_path='/'
 )
 
-app.secret_key = '4d9a9fa7d22a7bb23469d1ec927ed0b244fc0f6d03f4ac3eab2795e2156c5d8c'
+app.secret_key = os.environ.get('SECRET_KEY')
 
 login_manager = LoginManager()
 login_manager.init_app(app)
