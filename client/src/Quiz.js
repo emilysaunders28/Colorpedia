@@ -11,29 +11,61 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect, use } from 'react';
 
 const Quiz = (props) => {
-    const userInfo = props.userInfo
-    const setUserInfo = props.setUserInfo
-    const quizData = userInfo['quiz_data']
-    const [term, setTerm] = useState(props.term)
+    const userInfo = props.userInfo;
+    const setUserInfo = props.setUserInfo;
+    const quizData = userInfo['quiz_data'];
+    const [term, setTerm] = useState(props.term);
     const { page } = useParams();
-    const [selected,setSelected] = useState(quizData['quiz'][term][parseInt(page)-1]);
-    const [submitted, setSubmitted] = useState(Boolean(selected))
+
+    const [isPending, setIsPending] = useState(true);
+    const [error, setError] = useState(null);
+    const [questions, setQuestions] = useState(null);
 
     const titles = {"hue": "Hue", "shade": "Shade", "tint": "Tint", "tone": "Tone", "chroma_saturation": "Chroma/Saturation", "value": "Value", "contrast": "Contrast", "final": "Final Quiz", "none": ""}
     const nextTerm = {"hue": "shade", "shade": "tint", "tint": "tone", "tone": "chroma_saturation", "chroma_saturation": "value", "value": "contrast", "contrast": "final", "final" : "none"}
 
-    const { data: questions, isPending, error } = useFetch('/data/quiz/' + term);
+
+    const fetchQuestions = () => {
+        setIsPending(true);
+        fetch('/data/quiz/' + term, {
+          credentials: 'include',
+          method: 'GET',
+        })
+          .then(res => {
+            if(!res.ok) {
+              throw Error('Could not fetch data');
+            }
+            return res.json();
+          })
+          .then((data) => {
+            setQuestions(data['data'])
+            setIsPending(false);
+            setError(null);
+          })
+          .catch(err => {
+            setError(err.message);
+            console.log(error);
+          });
+      }
+      
+      useEffect(() => {
+        fetchQuestions();
+      }
+      ,[term]);
 
     useEffect(() => {
         setTerm(props.term)
         }
     , [props.term])
 
-    useEffect(() => {
-        setSelected(quizData['quiz'][term][parseInt(page)-1]);
-        setSubmitted(Boolean(quizData['quiz'][term][parseInt(page)-1]));
-    }, [page, term]);
 
+    if (isPending) {
+        return <div>Loading…</div>; 
+    }
+
+    if (error) {
+        return <div>{error}</div>;
+    }
 
     return (
         <>
@@ -72,10 +104,7 @@ const Quiz = (props) => {
                                         question={{"term" : term, "id": page}} 
                                         userInfo={userInfo}
                                         setUserInfo={setUserInfo}
-                                        selected={selected}
-                                        setSelected={setSelected} 
-                                        submitted={submitted}
-                                        setSubmitted={setSubmitted}
+                                        selected={quizData['quiz'][term][parseInt(page)-1]}
                                         page={page}
                                         term={term}
                                     />}
@@ -85,10 +114,7 @@ const Quiz = (props) => {
                                         question={{"term" : term, "id": page}} 
                                         userInfo={userInfo}
                                         setUserInfo={setUserInfo}
-                                        selected={selected}
-                                        setSelected={setSelected}  
-                                        submitted={submitted}
-                                        setSubmitted={setSubmitted}
+                                        selected={quizData['quiz'][term][parseInt(page)-1]}
                                         page={page}
                                         term={term}
                                     />}
@@ -100,8 +126,7 @@ const Quiz = (props) => {
                                         numberOfPages={Object.keys(questions).length} 
                                         type={'quiz'} 
                                         options={questions[page]['options']}
-                                        selected={selected}
-                                        submitted={submitted}
+                                        disabled={!(userInfo['quiz_data']['quiz'][term][parseInt(page)-1] && questions[page]['options']?.[userInfo['quiz_data']['quiz'][term][parseInt(page)-1]]?.correct)}
                                         nextTerm={nextTerm[term]}
                                         nextTermTitle={titles[nextTerm[term]]}
                                     />

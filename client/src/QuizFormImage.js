@@ -6,19 +6,19 @@ import Row from 'react-bootstrap/esm/Row';
 import { useEffect, useState } from 'react';
 
 const QuizFormImage = (props) => {
-    const [options, setOptions] = useState(props.options)
-    const question = props.question
-    const userInfo = props.userInfo
-    const setUserInfo = props.setUserInfo
-    const selected = props.selected
-    const setSelected = props.setSelected
-    const submitted = props.submitted
-    const setSubmitted = props.setSubmitted
+    const options = props.options;
+    const question = props.question;
+    const userInfo = props.userInfo;
+    const setUserInfo = props.setUserInfo;
+    const [selected,setSelected] = useState(props.selected);
+    const [submitted, setSubmitted] = useState(Boolean(selected));
 
     useEffect(() => {
-        setOptions(props.options)
-        console.log("Updating options with useEffect:", options)}
-        , [props.options])
+        setSelected(props.selected)
+        setSubmitted(Boolean(props.selected))
+        }
+        , [props.selected])
+
     
     const handleSubmit = (e) => {
         e.preventDefault()

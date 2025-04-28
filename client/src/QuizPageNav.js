@@ -10,7 +10,7 @@ const QuizPageNav = (props) => {
     const nextTerm = props.nextTerm
     const nextTermTitle = props.nextTermTitle
     const type = props.type
-    const disabled = !(props.submitted && Boolean(props.selected) && props.options?.[props.selected]?.correct);
+    const disabled = props.disabled;
 
     const url = term==='final' ? `/${term}/` : `/${term}/${type}/`
 

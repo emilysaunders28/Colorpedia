@@ -5,13 +5,56 @@ import Row from 'react-bootstrap/Row';
 import Media from './Media';
 import useFetch from "./useFetch";
 import { useParams } from "react-router-dom";
+import { useState, useEffect } from 'react';
 
 const Learn = (props) => {
     const userInfo = props.userInfo
     const setUserInfo = props.setUserInfo
     const { page } = useParams();
-    const term = props.term
-    const { data: content, isPending, error } = useFetch('/data/learn/' + term);
+    const [term, setTerm] = useState(props.term)
+    const [isPending, setIsPending] = useState(true);
+    const [error, setError] = useState(null);
+    const [content, setContent] = useState(null);
+    console.log(term)
+
+    const fetchContent = () => {
+        setIsPending(true);
+        fetch('/data/learn/' + term, {
+          credentials: 'include',
+          method: 'GET',
+        })
+          .then(res => {
+            if(!res.ok) {
+              throw Error('Could not fetch data');
+            }
+            return res.json();
+          })
+          .then((data) => {
+            setContent(data['data'])
+            setIsPending(false);
+            setError(null);
+          })
+          .catch(err => {
+            setError(err.message);
+            console.log(error);
+          });
+      }
+
+    useEffect(() => {
+        setTerm(props.term)
+        }
+        , [props.term]);
+    useEffect(() => {
+        fetchContent();
+        }
+        , [term]);
+
+    if (isPending) {
+        return <div>Loading…</div>; 
+    }
+    if (error) {
+        return <div>{error}</div>;
+    }
 
     return (  
         <>

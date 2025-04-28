@@ -6,7 +6,7 @@ const Sidebar = (props) => {
     const userInfo = props.userInfo
     const setUserInfo = props.setUserInfo
     const quizData = userInfo['quiz_data']
-    const [progress,setProgress] = useState(quizData['progress'])
+    const progress = quizData['progress']
     const [activeType, setActiveType] = useState(props.type)
     const [accordionKey , setAccordionKey] = useState(props.term === 'final' ? null: props.term)
     const terms = ['Hue', 'Shade', 'Tint', 'Tone', 'Chroma/Saturation', 'Value', 'Contrast']
@@ -21,10 +21,7 @@ const Sidebar = (props) => {
         })
     }
 
-    useEffect(() => {
-        setProgress(userInfo['quiz_data']['progress'])
-        }
-    , [userInfo])
+
 
     useEffect(() => {
         setAccordionKey(props.term === 'final' ? null: props.term)

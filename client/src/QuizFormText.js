@@ -4,20 +4,24 @@ import Row from 'react-bootstrap/esm/Row';
 import { useState, useEffect } from 'react';
 
 const QuizFormText = (props) => {
-    const [options, setOptions] = useState(props.options)
+    const options = props.options;
     const question = props.question
     const userInfo = props.userInfo
     const setUserInfo = props.setUserInfo
-    const selected = props.selected
+    const [selected,setSelected] = useState(props.selected);
+    const [submitted, setSubmitted] = useState(Boolean(selected));
     
-        useEffect(() => {
-            setOptions(props.options)
-        }
-            , [props.options])
+
+    useEffect(() => {
+        setSelected(props.selected)
+        setSubmitted(Boolean(props.selected))
+    }
+        , [props.selected])
+
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        props.setSubmitted(true)
+        setSubmitted(true)
         const data = { selected, question }
 
         userInfo['quiz_data']['quiz'][props.term][parseInt(props.page)-1] = selected
@@ -42,12 +46,12 @@ const QuizFormText = (props) => {
     }
 
     const handleRetry = () => {
-        props.setSubmitted(false)
-        props.setSelected('')
+        setSubmitted(false)
+        setSelected('')
     }
 
     const handleChange = (e) => {
-        props.setSelected(e.target.value)
+        setSelected(e.target.value)
     }
 
     return (
@@ -57,25 +61,25 @@ const QuizFormText = (props) => {
                     return <Form.Check 
                         type='radio' 
                         className='quiz-option-text'
-                        disabled={props.submitted}
+                        disabled={submitted}
                         key={option.id}
                         label={option.text}
                         value={option.id}
-                        checked={props.selected === option.id}
+                        checked={selected === option.id}
                         onChange={handleChange}
                     />
                 })}
             </Form.Group>
             <Row>
-                {props.submitted && props.selected===options[props.selected].id &&
-                    <div className={options[props.selected].correct ? 'correct feedback' : 'incorrect feedback'}>
-                        {options[props.selected].explanation}
+                {submitted && selected && selected===options[selected].id &&
+                    <div className={options[selected].correct ? 'correct feedback' : 'incorrect feedback'}>
+                        {options[selected].explanation}
                     </div>
                 }
             </Row>
             <Row>
-                {!props.submitted && <Button className='quiz-button' type='submit' onClick={handleSubmit} disabled={!Boolean(props.selected)}>Submit</Button>}
-                {props.submitted && !options[props.selected].correct && <Button className='quiz-button' onClick={handleRetry} >Retry</Button>}
+                {!submitted && <Button className='quiz-button' type='submit' onClick={handleSubmit} disabled={!Boolean(selected)}>Submit</Button>}
+                {submitted && !options[selected].correct && <Button className='quiz-button' onClick={handleRetry} >Retry</Button>}
             </Row>
         </Form>
     );

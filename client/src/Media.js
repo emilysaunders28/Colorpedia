@@ -5,22 +5,21 @@ import { useState,useEffect } from 'react';
 
 const Media = (props) => {
     const [current, setCurrent] = useState('0')
-    const [media, setMedia] = useState(props.media)
+
+    const media = props.media
     const term = props.term
     const page = props.page
+
     const currentMedia = media[current]
     const caption = currentMedia.caption
     const description = currentMedia.description
     const alt = currentMedia.alt
     const src = currentMedia.src
     const url = window.location.href
-    console.log("current", current)
-    console.log("page", page)
 
 
     useEffect(() => {
         setCurrent('0')
-        setMedia(props.media)
     }, [page, term, media])
 
     return (
