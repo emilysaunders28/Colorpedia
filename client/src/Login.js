@@ -96,7 +96,7 @@ const Login = (props) => {
                         <Form onSubmit={handleUserSubmit} className='login-form'>
                             <h4>Existing Users</h4>
                             <Form.Group className='mb-3'>
-                                <Form.Label>Enter your uername</Form.Label>
+                                <Form.Label>Enter your username</Form.Label>
                                 <Form.Control 
                                     id='username'
                                     type='text' 
